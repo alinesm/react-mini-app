@@ -5,7 +5,7 @@ import ErrorMessage from "@/components/shared/errorMessage";
 import TableHeader from "@/components/productList/tableHeader";
 import TableBody from "@/components/productList/tableBody";
 
-export default function ProjectList() {
+export default function ProjectListPage() {
   const {
     filteredProjects,
     handleSearchChange,
@@ -24,7 +24,7 @@ export default function ProjectList() {
 
   return (
     <div role="list" tabIndex={0} aria-label="List of projects" className="relative overflow-x-auto shadow-md sm:rounded-lg pt-2 px-2 pb-8 my-10 mx-10">
-     <h1 aria-label="Projects" role="heading" aria-level={1} aria-describedby="projects-description" tabIndex={0} className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Projects</h1>
+     <h1 tabIndex={0} className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Projects</h1>
       <SearchInput handleSearchChange={handleSearchChange} search={search} />
 
       <table tabIndex={0} role="table" aria-label="Projects table" className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">

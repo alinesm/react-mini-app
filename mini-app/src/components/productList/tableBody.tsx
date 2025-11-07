@@ -21,11 +21,17 @@ export default function TableBody({
   return (
     <tbody>
       {filteredProjects.map((project) => (
-        <tr 
+        <tr
           key={project.id}
           tabIndex={0}
           role="row"
-          aria-label={`Project ${project.name}`}
+          aria-label={`Project id: ${project.id}, name: ${
+            project.name
+          }, owner: ${project.owner}, description: ${
+            project.description
+          }, status: ${project.status}, updated at: ${new Date(
+            project.updatedAt
+          ).toLocaleDateString("en-US")}`}
           className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600"
         >
           <td className="w-4 p-4">{project.id}</td>
@@ -45,7 +51,9 @@ export default function TableBody({
               {project.status}
             </span>
           </td>
-          <td className="w-4 p-4">{new Date(project.updatedAt).toLocaleDateString("en-US")}</td>
+          <td className="w-4 p-4">
+            {new Date(project.updatedAt).toLocaleDateString("en-US")}
+          </td>
           <td className="w-4 p-4">
             <Link
               to={`/project/${project.id}`}

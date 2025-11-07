@@ -6,7 +6,7 @@ export default function SearchInput({
   search: string;
 }) {
   return (
-    <div className="pb-4 bg-white dark:bg-gray-900 shadow-md rounded-lg">
+    <div role="search" aria-label="Search for projects" className="pb-4 bg-white dark:bg-gray-900 shadow-md rounded-lg">
       <label htmlFor="table-search" className="sr-only">
         Search
       </label>

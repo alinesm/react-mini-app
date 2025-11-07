@@ -1,6 +1,6 @@
 export default function TableHeader() {
   return (
-    <thead tabIndex={0} role="rowgroup" aria-label="Table header columns " className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+    <thead tabIndex={0} role="rowgroup" aria-label="Table header columns for projects: id, name, owner, description, status, updated at, action button" className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
           <tr> 
             <th scope="col" className="px-6 py-3">
               ID
